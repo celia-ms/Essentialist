@@ -1,0 +1,107 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/0.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/1.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/10.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/11.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/12.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/13.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/14.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/15.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/16.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/2.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/3.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/4.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/5.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/6.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/7.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/8.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/9.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/index.pack
+.angular/cache/13.3.8/angular-webpack/1f2afab9ad410f729da3efbbfc30e5727ee93796/index.pack.old
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/0.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/1.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/10.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/11.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/12.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/13.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/14.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/15.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/16.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/17.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/18.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/2.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/3.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/4.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/5.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/6.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/7.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/8.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/9.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/index.pack
+.angular/cache/13.3.8/angular-webpack/76c88527a4ed3d705c623ab8955e86d40f5f47d2/index.pack.old
+.angular/cache/13.3.8/babel-webpack/0b392ee5cc96837209c2df09dfdef1ff.json
+.angular/cache/13.3.8/babel-webpack/150cb9ce4e7e7bdcfb2330d4ea6a843f.json
+.angular/cache/13.3.8/babel-webpack/28915d241a5c2d7e4860ea37fe41b488.json
+.angular/cache/13.3.8/babel-webpack/2a4668f8d405ef71f8bebcb86510402d.json
+.angular/cache/13.3.8/babel-webpack/2ebb0c5532406ad0987fb3b06e62c56c.json
+.angular/cache/13.3.8/babel-webpack/326722f531061edda3be32e2a4a90656.json
+.angular/cache/13.3.8/babel-webpack/4efb8c6d2f4afbd04f56e6f3b352c85a.json
+.angular/cache/13.3.8/babel-webpack/59d3e9a620eb5c079b4fea5f3475621c.json
+.angular/cache/13.3.8/babel-webpack/7229979e2488b545ab5347cd343c8758.json
+.angular/cache/13.3.8/babel-webpack/7ba13e875e991f06cd0e277f987eaee5.json
+.angular/cache/13.3.8/babel-webpack/8e85702b969d7ae0b52cf5617d267a4b.json
+.angular/cache/13.3.8/babel-webpack/902ff6f867e9d268df00cf4c0d3074af.json
+.angular/cache/13.3.8/babel-webpack/a37b0e6a6cad280aebd339fed9cb9427.json
+.angular/cache/13.3.8/babel-webpack/ac7df7ed10993f965a3cfe14367641f4.json
+.angular/cache/13.3.8/babel-webpack/bcd2d7890386947a5851ef35892572aa.json
+.angular/cache/13.3.8/babel-webpack/c1b465e88208792b4b18a4c9380ce28a.json
+.angular/cache/13.3.8/babel-webpack/d1281615672d0efd0ffc0403720aedfc.json
+.angular/cache/13.3.8/babel-webpack/d153df5c711eda7e707688afb25ba77b.json
+.angular/cache/13.3.8/babel-webpack/d5f0e0e1fb1265551df08588031faf0a.json
+.angular/cache/13.3.8/babel-webpack/e9fbc9e6c340341e0a1b2719e66448ef.json
+.angular/cache/13.3.8/babel-webpack/ecea23b0c6406d57cb7e88937b29ae51.json
+.angular/cache/13.3.8/babel-webpack/ff20c9dd09c08fd0b9afa9a70f73e634.json

@@ -1,0 +1,16 @@
+@use "sass:map";
+
+/*FONT FAMILY*/
+@font-face {
+  font-family: "PlantinMTProRg";
+  src: url("../fonts/PlantinMTProRg.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*COLORS*/
+:root {
+  --color-background: #fff;
+  --color-text-primary: #303030;
+  --color-button-primary: #303030;
+}

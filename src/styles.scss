@@ -1,0 +1,27 @@
+@import "../src/assets/styles/essentialist-style";
+
+/* LAYOUT */
+@import "../src/assets/styles/components/layout";
+
+/* TOOLBAR */
+@import "../src/assets/styles/components/toolbar";
+
+/* FOOTER */
+@import "../src/assets/styles/components/footer";
+
+/* MENU */
+@import "../src/assets/styles/components/menu";
+
+/* BUTTON */
+@import "../src/assets/styles/components/button";
+
+/* GENERAL */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}

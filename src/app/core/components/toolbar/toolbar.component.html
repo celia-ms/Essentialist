@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <mat-toolbar-row class="d-flex align-items-center justify-content-between w-100 p-2">
+        <mat-icon class="logo" svgIcon="icon-logo"></mat-icon>
+        <button mat-icon-button [disableRipple]="true" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu">
+            <mat-icon class="material-icons-outlined">settings</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="toolbar-menu">
+            <mat-button-toggle-group [(ngModel)]="selectedLanguage" (change)="changeLanguage()" name="language">
+                <mat-button-toggle *ngFor="let language of languages" [value]="language">
+                    <img src="{{language.icon}}">
+                    <span class="px-1">{{ language.display | translate }}</span>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

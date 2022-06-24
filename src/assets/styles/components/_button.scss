@@ -1,0 +1,14 @@
+.material-icons {
+  color: var(--color-button-primary) !important;
+  font-size: 40px;
+  .mat-icon {
+    line-height: 1 !important;
+  }
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+.mat-button-focus-overlay {
+  background-color: transparent !important;
+}

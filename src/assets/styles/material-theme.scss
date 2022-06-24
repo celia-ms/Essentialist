@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "~@angular/material" as mat;
+// My version of the dark and light background and foreground palettes
+// I copied the ones in the _palette.scss file (the Github repo link you posted)
+// and tweaked the values to my liking.
+@use "./essentialist-style" as e;
+
+@include mat.core();
+
+mat.$theme-ignore-duplication-warnings: true;
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+/*TYPOGRAPHY*/
+$mt-typography: mat.define-typography-config(
+  $font-family: "PlantinMTProRg",
+  /*One-off header, usually at the top of the page (e.g. a hero header).*/
+    $display-4:
+    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3:
+    mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2:
+    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat.define-typography-level(34px, 40px, 400),
+  /*Section heading corresponding to the <h1> tag*/ $headline:
+    mat.define-typography-level(24px, 32px, 400),
+  /*Section heading corresponding to the <h2> tag*/ $title:
+    mat.define-typography-level(14px, 30px, 400),
+  /*Section heading corresponding to the <h3> tag*/ $subheading-2:
+    mat.define-typography-level(17px, 28px, 400),
+  /*Section heading corresponding to the <h4> tag*/ $subheading-1:
+    mat.define-typography-level(16px, 24px, 400),
+  /*Base body text*/ $body-1: mat.define-typography-level(14px, 24px, 400),
+  /*Bolder body text*/ $body-2: mat.define-typography-level(14px, 24px, 700),
+  /*Smaller body and hint text*/ $caption:
+    mat.define-typography-level(14px, 24px, 400),
+  /*Buttons and anchors*/ $button: mat.define-typography-level(14px, 24px, 400),
+  /*Form input fields*/ $input: mat.define-typography-level(14px, 1em, 400),
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core($mt-typography);

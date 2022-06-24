@@ -1,0 +1,10 @@
+.layout-container {
+  background-color: var(--color-background);
+  background-position: top left;
+  background-size: cover;
+  .dashboard-container {
+    // 90px = toolbar (66px) + footer (24px)
+    height: calc(100vh - 90px) !important;
+    overflow: auto !important;
+  }
+}

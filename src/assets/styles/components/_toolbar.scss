@@ -1,0 +1,12 @@
+mat-toolbar-row {
+  .mat-icon {
+    height: auto;
+    width: auto;
+    &.logo {
+      height: 50px;
+    }
+  }
+}
+.mat-toolbar-multiple-rows {
+  background: var(--color-background);
+}
