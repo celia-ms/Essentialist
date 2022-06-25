@@ -18,6 +18,8 @@
         "past-trip": "Past Trips",
         "next-trip": "Start planing your next trip",
         "add-trip": "Add Trip",
-        "people": "People"
+        "people": "People",
+        "see-more": "See more",
+        "see-less": "See less"
     }
 }

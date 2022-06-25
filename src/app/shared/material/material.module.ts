@@ -8,6 +8,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const MATERIAL_COMPONENTS = [
   MatButtonModule,
@@ -18,6 +20,8 @@ const MATERIAL_COMPONENTS = [
   MatButtonToggleModule,
   MatBadgeModule,
   MatCardModule,
+  MatExpansionModule,
+  MatGridListModule,
 ];
 @NgModule({
   declarations: [],
