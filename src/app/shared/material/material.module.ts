@@ -6,6 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatCardModule } from '@angular/material/card';
 
 const MATERIAL_COMPONENTS = [
   MatButtonModule,
@@ -14,6 +16,8 @@ const MATERIAL_COMPONENTS = [
   MatMenuModule,
   MatTabsModule,
   MatButtonToggleModule,
+  MatBadgeModule,
+  MatCardModule,
 ];
 @NgModule({
   declarations: [],

@@ -5,5 +5,17 @@
     },
     "footer": {
         "project": "@ESSENTILIS, 2022. ALL RIGHTS RESERVED"
+    },
+    "menu": {
+        "welcome": "Welcome Mr. Tyer",
+        "travel-dispatch": "The Travel Dispatch",
+        "my-trips": "My Trips",
+        "my-profile": "My Profile"
+    },
+    "content": {
+        "on-going-trip": "On Going",
+        "upcoming-trip": "Upcoming Trips",
+        "past-trip": "Past Trips",
+        "people": "People"
     }
 }

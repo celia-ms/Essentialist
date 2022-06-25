@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { LayoutComponent } from './pages/layout/layout.component';
+import { LayoutComponent } from './components/layout/layout.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';

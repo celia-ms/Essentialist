@@ -1,0 +1,15 @@
+.owl-prev,
+.owl-next {
+  position: absolute;
+  font-size: 60px !important;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.owl-prev {
+  left: -20px;
+}
+
+.owl-next {
+  right: -12px;
+}

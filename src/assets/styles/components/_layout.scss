@@ -1,10 +1,10 @@
+app-toolbar {
+  width: calc(100% - 32%);
+  position: absolute;
+  z-index: 1;
+  padding: 0 60px;
+  color: var(--color-text-secondary);
+}
 .layout-container {
-  background-color: var(--color-background);
-  background-position: top left;
-  background-size: cover;
-  .dashboard-container {
-    // 90px = toolbar (66px) + footer (24px)
-    height: calc(100vh - 90px) !important;
-    overflow: auto !important;
-  }
+  background: var(--color-background);
 }

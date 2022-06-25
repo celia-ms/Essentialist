@@ -14,9 +14,8 @@ mat.$theme-ignore-duplication-warnings: true;
 /*TYPOGRAPHY*/
 $mt-typography: mat.define-typography-config(
   $font-family: "PlantinMTProRg",
-  /*One-off header, usually at the top of the page (e.g. a hero header).*/
-    $display-4:
-    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  /*One-off header, usually at the top of the page.*/ $display-4:
+    mat.define-typography-level(112px, 112px, normal, $letter-spacing: 0.2em),
   $display-3:
     mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
   $display-2:
@@ -25,16 +24,16 @@ $mt-typography: mat.define-typography-config(
   /*Section heading corresponding to the <h1> tag*/ $headline:
     mat.define-typography-level(24px, 32px, 400),
   /*Section heading corresponding to the <h2> tag*/ $title:
-    mat.define-typography-level(14px, 30px, 400),
+    mat.define-typography-level(18px, 30px, normal),
   /*Section heading corresponding to the <h3> tag*/ $subheading-2:
-    mat.define-typography-level(17px, 28px, 400),
+    mat.define-typography-level(17px, 28px, normal),
   /*Section heading corresponding to the <h4> tag*/ $subheading-1:
     mat.define-typography-level(16px, 24px, 400),
   /*Base body text*/ $body-1: mat.define-typography-level(14px, 24px, 400),
-  /*Bolder body text*/ $body-2: mat.define-typography-level(14px, 24px, 700),
+  /*Bolder body text*/ $body-2: mat.define-typography-level(16px, 24px, 700),
   /*Smaller body and hint text*/ $caption:
     mat.define-typography-level(14px, 24px, 400),
-  /*Buttons and anchors*/ $button: mat.define-typography-level(14px, 24px, 400),
+  /*Buttons and anchors*/ $button: mat.define-typography-level(18px, 24px, 400),
   /*Form input fields*/ $input: mat.define-typography-level(14px, 1em, 400),
 );
 
