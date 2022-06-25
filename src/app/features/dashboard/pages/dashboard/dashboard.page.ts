@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tripMock } from 'src/app/core/mocks/trip.mock';
+import { tripMock, tripsMock } from 'src/app/core/mocks/trip.mock';
 import { Trip } from 'src/app/core/models/trip';
 
 @Component({
@@ -9,7 +9,7 @@ import { Trip } from 'src/app/core/models/trip';
 })
 export class DashboardPage implements OnInit {
   onGoingTrip: Trip = tripMock;
-  upcomingTrips: Trip[] = [];
+  upcomingTrips: Trip[] = JSON.parse(tripsMock);
 
   carouselOptions = { items: 3, dots: false, nav: true, slideBy: 3 };
 

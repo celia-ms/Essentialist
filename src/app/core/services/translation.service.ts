@@ -20,7 +20,7 @@ export class TranslationService {
     },
   ];
 
-  public activeLanguage: any = navigator.language.slice(0, 2);
+  public activeLanguage: any = 'en';
   public language$ = new BehaviorSubject(this.activeLanguage);
 
   public displayLanguage: any = this.findLanguage('en');

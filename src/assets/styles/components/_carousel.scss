@@ -11,5 +11,10 @@
 }
 
 .owl-next {
-  right: -12px;
+  right: -30px;
+}
+
+.owl-item.active:nth-child(3n -1) {
+  border-right: solid 1px var(--color-border-primary);
+  border-left: solid 1px var(--color-border-primary);
 }

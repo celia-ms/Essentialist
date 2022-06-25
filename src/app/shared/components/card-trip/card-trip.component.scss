@@ -1,0 +1,17 @@
+mat-card-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mat-card-content {
+  p {
+    color: var(--color-text-tertiary);
+  }
+}
+
+.mat-card {
+  margin: 0 16px;
+  padding: 0;
+  border-radius: 0;
+}
