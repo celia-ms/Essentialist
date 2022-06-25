@@ -1,0 +1,9 @@
+mat-grid-tile:nth-child(3n -1) {
+  app-card-trip {
+    border-right: solid 1px var(--color-border-primary);
+    border-left: solid 1px var(--color-border-primary);
+  }
+}
+mat-grid-tile.mat-grid-tile {
+  border-bottom: solid 1px var(--color-border-primary);
+}

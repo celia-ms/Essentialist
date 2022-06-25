@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { paths } from 'src/app/shared/paths';
 import { TranslationService } from '../../services/translation.service';
 
 @Component({
@@ -15,10 +13,7 @@ export class ToolbarComponent implements OnInit {
 
   isDark = false;
 
-  constructor(
-    private router: Router,
-    private translation: TranslationService
-  ) {}
+  constructor(private translation: TranslationService) {}
 
   ngOnInit(): void {
     this.languages = this.translation.getLanguages();

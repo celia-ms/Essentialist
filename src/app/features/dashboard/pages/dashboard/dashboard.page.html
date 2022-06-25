@@ -1,0 +1,42 @@
+<div class="trips-container">
+    <div class="on-going-container">
+        <app-header-trip [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
+    </div>
+    <div class="upcoming-container py-4">
+        <p class="mat-subheading-2">{{'content.upcoming-trip' | translate}}</p>
+        <owl-carousel [options]="carouselOptions" [carouselClasses]="['owl-theme', 'sliding']">
+            <mat-card class="add-trip-container">
+                <mat-card-content class="d-flex flex-column align-items-center justify-content-center h-100 px-4">
+                    <h1 class="mat-display-1 text-center my-2">{{'content.next-trip' | translate}}</h1>
+                    <button mat-stroked-button color="primary">
+                        {{'content.add-trip' | translate |uppercase}}
+                    </button>
+                </mat-card-content>
+            </mat-card>
+            <div *ngFor="let trip of upcomingTrips;trackBy: trackByTrip">
+                <div>
+                    <app-card-trip [trip]=trip></app-card-trip>
+                </div>
+            </div>
+        </owl-carousel>
+    </div>
+    <div class="past-container pb-4">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class="p-0">
+                    <mat-panel-title>
+                        <p class="mat-subheading-2">{{'content.past-trip' | translate}}</p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{ panelOpenState ? ('content.see-less' | translate |uppercase) : ('content.see-more' | translate |uppercase) }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <mat-grid-list class="py-3 w-100" [rowHeight]="rowHeight" [cols]="columns" (window:resize)="setDimensions($event.target)">
+                    <mat-grid-tile *ngFor="let trip of pastTrips;trackBy: trackByTrip">
+                        <app-card-trip class="w-100" [trip]=trip></app-card-trip>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

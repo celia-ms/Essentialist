@@ -105,3 +105,5 @@ Thumbs.db
 .angular/cache/13.3.8/babel-webpack/e9fbc9e6c340341e0a1b2719e66448ef.json
 .angular/cache/13.3.8/babel-webpack/ecea23b0c6406d57cb7e88937b29ae51.json
 .angular/cache/13.3.8/babel-webpack/ff20c9dd09c08fd0b9afa9a70f73e634.json
+*.pack
+*.old

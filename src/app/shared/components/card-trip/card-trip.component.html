@@ -1,0 +1,11 @@
+<mat-card>
+    <div class="d-flex align-items-center justify-content-center">
+        <img class="w-100" mat-card-xl-image src="{{trip.image}}">
+    </div>
+    <mat-card-subtitle class="mat-subheading-1 pt-3">{{trip.visibility_status | uppercase}}</mat-card-subtitle>
+    <mat-card-title class="mat-display-1 my-2">{{trip.title}}</mat-card-title>
+    <mat-card-content>
+        <p class="mat-subheading-2 m-0">July 8th to 12th, 2021</p>
+        <p class="mat-subheading-2">{{trip.adults + trip.children + trip.infants}} {{'content.people' | translate}}</p>
+    </mat-card-content>
+</mat-card>
