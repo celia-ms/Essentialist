@@ -1,23 +1,14 @@
 <div class="trips-container">
     <div class="on-going-container">
-        <app-header-trip [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
+        <app-header-trip *ngIf="onGoingTrip" [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
     </div>
     <div class="upcoming-container py-4">
         <p class="mat-subheading-2">{{'content.upcoming-trip' | translate}}</p>
-        <owl-carousel [options]="carouselOptions" [carouselClasses]="['owl-theme', 'sliding']">
-            <mat-card class="add-trip-container">
-                <mat-card-content class="d-flex flex-column align-items-center justify-content-center h-100 px-4">
-                    <h1 class="mat-display-1 text-center my-2">{{'content.next-trip' | translate}}</h1>
-                    <button mat-stroked-button color="primary">
-                        {{'content.add-trip' | translate |uppercase}}
-                    </button>
-                </mat-card-content>
-            </mat-card>
-            <div *ngFor="let trip of upcomingTrips;trackBy: trackByTrip">
-                <div>
-                    <app-card-trip [trip]=trip></app-card-trip>
-                </div>
-            </div>
+        <app-card-add-trip *ngIf="upcomingTrips.length === 0"></app-card-add-trip>
+        <owl-carousel *ngIf="upcomingTrips.length > 0" [options]="carouselOptions" [carouselClasses]="['owl-theme', 'sliding']">
+            <app-card-add-trip></app-card-add-trip>
+            <app-card-trip *ngFor="let trip of upcomingTrips;trackBy: trackByTrip" [trip]=trip></app-card-trip>
+
         </owl-carousel>
     </div>
     <div class="past-container pb-4">

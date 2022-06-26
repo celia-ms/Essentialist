@@ -11,8 +11,6 @@ export class ToolbarComponent implements OnInit {
 
   languages: any = [];
 
-  isDark = false;
-
   constructor(private translation: TranslationService) {}
 
   ngOnInit(): void {

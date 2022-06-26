@@ -10,6 +10,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const MATERIAL_COMPONENTS = [
   MatButtonModule,
@@ -22,6 +24,8 @@ const MATERIAL_COMPONENTS = [
   MatCardModule,
   MatExpansionModule,
   MatGridListModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
 ];
 @NgModule({
   declarations: [],

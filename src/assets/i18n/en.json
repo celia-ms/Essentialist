@@ -21,5 +21,9 @@
         "people": "People",
         "see-more": "See more",
         "see-less": "See less"
+    },
+    "error": {
+        "get-trips": "There was an error getting trips",
+        "get-trip-by-hash": "There was an error getting the trip"
     }
 }

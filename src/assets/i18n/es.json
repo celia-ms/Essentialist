@@ -21,5 +21,9 @@
         "people": "Personas",
         "see-more": "Ver más",
         "see-less": "Ver menos"
+    },
+    "error": {
+        "get-trips": "Se ha producido un error al obtener los viajes",
+        "get-trip-by-hash": "Se ha produciun un error al obtener el viaje"
     }
 }
