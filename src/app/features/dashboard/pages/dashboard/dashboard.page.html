@@ -1,6 +1,6 @@
 <div class="trips-container">
     <div class="on-going-container">
-        <app-header-trip [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
+        <app-header-trip *ngIf="onGoingTrip" [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
     </div>
     <div class="upcoming-container py-4">
         <p class="mat-subheading-2">{{'content.upcoming-trip' | translate}}</p>

@@ -8,4 +8,5 @@ export interface Trip {
   adults: number;
   children: number;
   infants: number;
+  summary_date?: string;
 }

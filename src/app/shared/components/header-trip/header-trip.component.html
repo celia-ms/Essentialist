@@ -2,7 +2,7 @@
     <div class="information-container d-flex flex-column align-items-start justify-content-center w-100">
         <p class="mat-subheading-2">{{title | translate}}</p>
         <h1 class="mat-display-4 m-0">{{trip.title | uppercase}}</h1>
-        <h2 class="mat-subheading-2 fst-italic">July 8th to 12th, 2021</h2>
+        <h2 class="mat-subheading-2 fst-italic">{{trip.summary_date}}</h2>
         <h2 class="fst-italic">{{trip.adults + trip.children + trip.infants}} {{'content.people' | translate}}</h2>
     </div>
 </div>
