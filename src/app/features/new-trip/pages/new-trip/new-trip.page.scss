@@ -1,0 +1,5 @@
+.new-trip-container {
+  // 92px = toolbar (68px) + footer (24px)
+  height: calc(100vh - 92px) !important;
+  overflow: auto !important;
+}

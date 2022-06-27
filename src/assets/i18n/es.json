@@ -18,6 +18,10 @@
         "past-trip": "Viajes pasados",
         "next-trip": "Empieza a planificar tu próximo viaje",
         "add-trip": "Añadir viaje",
+        "new-trip": "Nuevo viaje",
+        "save-trip": "Guardar",
+        "back-trips": "Volver a mis viajes",
+        "save-message": "Su nuevo viaje se ha enviado con éxito a su diseñador de viajes que se comunicará con usted en breve.",
         "people": "Personas",
         "see-more": "Ver más",
         "see-less": "Ver menos"
@@ -25,5 +29,49 @@
     "error": {
         "get-trips": "Se ha producido un error al obtener los viajes",
         "get-trip-by-hash": "Se ha produciun un error al obtener el viaje"
+    },
+    "fields": {
+        "title": {
+            "display": "Título del viaje",
+            "placeholder": "Título del viaje",
+            "error": {
+                "required": "El título del viaje es obligatorio"
+            }
+        },
+        "visibility-status": {
+            "display": "Estado",
+            "placeholder": "Estado",
+            "error": {
+                "required": "El estado es obligatorio"
+            }
+        },
+        "departure-date": {
+            "display": "Salida",
+            "placeholder": "Salida",
+            "error": {
+                "required": "La fecha de salida es obligatoria"
+            }
+        },
+        "arrival-date": {
+            "display": "Llegada",
+            "placeholder": "Llegada",
+            "error": {
+                "required": "La fecha de llegada es obligatoria"
+            }
+        },
+        "image": {
+            "display": "Url imagen",
+            "placeholder": "Url imagen",
+            "error": {
+                "required": "La url de la imagen es obligatoria"
+            }
+        },
+        "destination": {
+            "display": "Destino",
+            "placeholder": "Destino",
+            "error": {
+                "required": "El destino es obligatorio"
+            }
+        }
     }
 }

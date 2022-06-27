@@ -1,0 +1,62 @@
+<form [formGroup]="tripForm" class="d-flex flex-column" autocomplete="off">
+    <div class="row py-2">
+        <mat-form-field appearance="legacy">
+            <mat-label>{{ 'fields.visibility-status.display' | translate |uppercase }}</mat-label>
+            <mat-select [formControlName]="'visibility_status'" name="status.value">
+                <mat-option *ngFor="let status of statusTypes" [value]="status.value">
+                    <span>{{ status.display}}</span>
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="tripForm.controls.visibility_status.invalid">{{ "fields.visibility-status.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="row py-2">
+        <mat-form-field appearance="legacy">
+            <mat-label>{{ 'fields.title.display' | translate |uppercase}}</mat-label>
+            <input matInput placeholder="{{ 'fields.title.placeholder' | translate |uppercase }}" [formControlName]="'title'" required />
+            <mat-error *ngIf="tripForm.controls.title.invalid">{{ "fields.title.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="row py-2">
+        <mat-form-field appearance="legacy" class="col-12 col-xl-6">
+            <mat-label>{{ 'fields.departure-date.display' | translate |uppercase }}</mat-label>
+            <input matInput [formControlName]="'departure_date'" [matDatepicker]="datepickerDeparture" required>
+            <mat-datepicker-toggle matSuffix [for]="datepickerDeparture"></mat-datepicker-toggle>
+            <mat-datepicker #datepickerDeparture>
+            </mat-datepicker>
+            <mat-error *ngIf="tripForm.controls.departure_date.invalid">{{ "fields.departure-date.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" class="col-12 col-xl-6">
+            <mat-label>{{ 'fields.arrival-date.display' | translate |uppercase }}</mat-label>
+            <input matInput [formControlName]="'arrival_date'" [matDatepicker]="datepickerArrival" required>
+            <mat-datepicker-toggle matSuffix [for]="datepickerArrival"></mat-datepicker-toggle>
+            <mat-datepicker #datepickerArrival>
+            </mat-datepicker>
+            <mat-error *ngIf="tripForm.controls.arrival_date.invalid">{{ "fields.arrival-date.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="row py-2">
+        <mat-form-field appearance="legacy">
+            <mat-label>{{ 'fields.destination.display' | translate |uppercase}}</mat-label>
+            <mat-select [formControlName]="'destination'" name="destination.value">
+                <mat-option *ngFor="let destination of destinationTypes" [value]="destination.value">
+                    <span>{{ destination.display}}</span>
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="tripForm.controls.destination.invalid">{{ "fields.destination.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="row py-2">
+        <mat-form-field appearance="legacy">
+            <mat-label>{{ 'fields.image.display' | translate |uppercase }}</mat-label>
+            <input matInput placeholder="{{ 'fields.image.placeholder' | translate |uppercase }}" [formControlName]="'image'" required />
+            <mat-error *ngIf="tripForm.controls.image.invalid">{{ "fields.image.error.required" | translate }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+</form>

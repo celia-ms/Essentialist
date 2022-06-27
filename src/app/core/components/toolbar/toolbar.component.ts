@@ -11,14 +11,26 @@ export class ToolbarComponent implements OnInit {
 
   languages: any = [];
 
-  constructor(private translation: TranslationService) {}
+  counter: string = '';
+
+  constructor(
+    private router: Router,
+    private translation: TranslationService
+  ) {}
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.counter = '1';
+    }, 2000);
     this.languages = this.translation.getLanguages();
     this.selectedLanguage = this.translation.getDisplayLanguage();
   }
 
   changeLanguage() {
     this.translation.changeLanguage(this.selectedLanguage.abbreviation);
+  }
+
+  navigateToDashboard() {
+    this.router.navigate([`/`]);
   }
 }

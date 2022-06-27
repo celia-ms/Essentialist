@@ -125,6 +125,17 @@
             "infants": 0
         },
         {
+            "title": "Romantic Weekend in the Adirondacks",
+            "image": "https://res.cloudinary.com/thebellhop/image/upload/v1617973438/awotvyyshovbtppd1coy.jpg",
+            "visibility_status": "itinerary",
+            "departure_date": "2023-08-25",
+            "arrival_date": "2023-08-28",
+            "hash": "f1ebcda7bcfvx356b3480aea73687f0",
+            "adults": 2,
+            "children": 1,
+            "infants": 1
+        },
+        {
             "title": "Adventure Weekend in the Adirondacks",
             "image": "https://res.cloudinary.com/thebellhop/image/upload/v1617973438/awotvyyshovbtppd1coy.jpg",
             "visibility_status": "itinerary",

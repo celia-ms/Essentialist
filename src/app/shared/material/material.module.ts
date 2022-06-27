@@ -12,6 +12,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const MATERIAL_COMPONENTS = [
   MatButtonModule,
@@ -26,6 +31,11 @@ const MATERIAL_COMPONENTS = [
   MatGridListModule,
   MatSnackBarModule,
   MatProgressSpinnerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatSelectModule,
+  MatNativeDateModule,
 ];
 @NgModule({
   declarations: [],

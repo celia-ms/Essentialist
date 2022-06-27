@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './core/components/layout/layout.component';
+import { paths } from './shared/paths';
 
 const routes: Routes = [
   {
@@ -10,6 +11,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
+      ),
+  },
+  {
+    path: paths.new_trip,
+    component: LayoutComponent,
+    loadChildren: () =>
+      import('./features/new-trip/new-trip.module').then(
+        (m) => m.NewTripModule
       ),
   },
   {

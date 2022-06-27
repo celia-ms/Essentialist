@@ -1,16 +1,15 @@
+@mixin information-container {
+  border-bottom: 1px solid var(--color-border-primary);
+  margin: 40px 122px;
+  padding: 24px 0;
+}
+
 .trips-container {
-  .on-going-container {
-  }
   .upcoming-container {
-    position: relative;
     border-top: 1px solid var(--color-border-primary);
-    border-bottom: 1px solid var(--color-border-primary);
-    margin: 40px 122px;
-    padding: 24px 0;
+    @include information-container;
   }
   .past-container {
-    border-bottom: 1px solid var(--color-border-primary);
-    margin: 40px 122px;
-    padding: 24px 0;
+    @include information-container;
   }
 }

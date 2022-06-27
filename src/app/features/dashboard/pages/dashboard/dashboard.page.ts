@@ -6,6 +6,8 @@ import { AppState } from 'src/app/core/store/app.state';
 import { clearTripState, getTrips } from 'src/app/core/store/trip/trip.actions';
 import * as tripSelector from 'src/app/core/store/trip/trip.selector';
 import * as _moment from 'moment';
+import { paths } from 'src/app/shared/paths';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +15,7 @@ import * as _moment from 'moment';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit, OnDestroy {
-  onGoingTrip!: Trip;
+  onGoingTrip: Trip = {} as Trip;
   upcomingTrips: Trip[] = [];
   pastTrips: Trip[] = [];
 
@@ -28,7 +30,7 @@ export class DashboardPage implements OnInit, OnDestroy {
 
   subscriptions = new Subscription();
 
-  constructor(private store: Store<AppState>) {
+  constructor(private router: Router, private store: Store<AppState>) {
     this.subscriptions.add(
       this.store.pipe(select(tripSelector.getTrips)).subscribe((trips) => {
         this.organizeTrips(trips);
@@ -72,6 +74,10 @@ export class DashboardPage implements OnInit, OnDestroy {
     return index;
   }
 
+  navigateToNewTrip() {
+    this.router.navigate([`${paths.new_trip}/`]);
+  }
+
   ngOnDestroy(): void {
     this.store.dispatch(clearTripState());
     this.subscriptions.unsubscribe();
@@ -89,6 +95,7 @@ export class DashboardPage implements OnInit, OnDestroy {
    * only be a current trip at the same time. Current trip will be visualized at the top (in the called hero section) as shown on the design
    * */
   private organizeTrips(trips: Trip[]) {
+    this.onGoingTrip = {} as Trip;
     this.pastTrips = [];
     this.upcomingTrips = [];
     let upcomingDate = _moment().add(7, 'days').format('YYYY-MM-DD');

@@ -8,3 +8,14 @@
   justify-content: center;
   align-items: center;
 }
+
+mat-expansion-panel.mat-expansion-panel {
+  box-shadow: none !important;
+  .mat-expansion-indicator {
+    padding: 10px;
+  }
+
+  .mat-expansion-panel-header:hover {
+    background: none !important;
+  }
+}
