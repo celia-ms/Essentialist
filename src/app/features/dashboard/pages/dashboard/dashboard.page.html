@@ -7,7 +7,7 @@
         <app-card-add-trip *ngIf="upcomingTrips.length === 0" (addClick)="navigateToNewTrip()"></app-card-add-trip>
         <owl-carousel *ngIf="upcomingTrips.length > 0" [options]="carouselOptions" [carouselClasses]="['owl-theme', 'sliding']">
             <app-card-add-trip (addClick)="navigateToNewTrip()"></app-card-add-trip>
-            <app-card-trip *ngFor="let trip of upcomingTrips;trackBy: trackByTrip" [trip]=trip></app-card-trip>
+            <app-card-trip *ngFor="let trip of upcomingTrips;trackBy: trackByTrip" [trip]=trip (click)="getTripByHash(trip.hash)"></app-card-trip>
 
         </owl-carousel>
     </div>
@@ -24,10 +24,12 @@
                 </mat-expansion-panel-header>
                 <mat-grid-list class="py-3 w-100" [rowHeight]="rowHeight" [cols]="columns" (window:resize)="setDimensions($event.target)">
                     <mat-grid-tile *ngFor="let trip of pastTrips;trackBy: trackByTrip">
-                        <app-card-trip class="w-100" [trip]=trip></app-card-trip>
+                        <app-card-trip class="w-100" [trip]=trip (click)="getTripByHash(trip.hash)"></app-card-trip>
                     </mat-grid-tile>
                 </mat-grid-list>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
 </div>
+
+<ng-template #tripDialog></ng-template>

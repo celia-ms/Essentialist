@@ -1,20 +1,36 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  ComponentFactoryResolver,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { Trip } from 'src/app/core/models/trip';
 import { AppState } from 'src/app/core/store/app.state';
-import { clearTripState, getTrips } from 'src/app/core/store/trip/trip.actions';
+import {
+  clearTripState,
+  getTrips,
+  getTripByHash,
+} from 'src/app/core/store/trip/trip.actions';
 import * as tripSelector from 'src/app/core/store/trip/trip.selector';
 import * as _moment from 'moment';
 import { paths } from 'src/app/shared/paths';
 import { Router } from '@angular/router';
-
+import { DialogTripComponent } from 'src/app/shared/components/dialog-trip/dialog-trip.component';
+import { DateService } from 'src/app/core/services/date.service';
+import { TripService } from 'src/app/core/services/trip.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit, OnDestroy {
+  @ViewChild('tripDialog', { read: ViewContainerRef, static: true })
+  tripDialog!: ViewContainerRef;
+
   onGoingTrip: Trip = {} as Trip;
   upcomingTrips: Trip[] = [];
   pastTrips: Trip[] = [];
@@ -30,10 +46,30 @@ export class DashboardPage implements OnInit, OnDestroy {
 
   subscriptions = new Subscription();
 
-  constructor(private router: Router, private store: Store<AppState>) {
+  constructor(
+    private tripService: TripService,
+    private dateService: DateService,
+    private router: Router,
+    private store: Store<AppState>
+  ) {
     this.subscriptions.add(
       this.store.pipe(select(tripSelector.getTrips)).subscribe((trips) => {
         this.organizeTrips(trips);
+      })
+    );
+
+    this.subscriptions.add(
+      this.store.pipe(select(tripSelector.getTrip)).subscribe((trip) => {
+        if (trip.hash) {
+          trip = {
+            ...trip,
+            summary_date: this.dateService.convertDates(
+              trip.departure_date,
+              trip.arrival_date
+            ),
+          };
+          this.openDialog(trip);
+        }
       })
     );
 
@@ -53,6 +89,19 @@ export class DashboardPage implements OnInit, OnDestroy {
 
   getTrips() {
     this.store.dispatch(getTrips());
+  }
+
+  getTripByHash(hash: string) {
+    this.store.dispatch(getTripByHash({ hash: hash }));
+  }
+
+  openDialog(trip: Trip) {
+    const component = this.tripDialog.createComponent(DialogTripComponent);
+    component.instance.open();
+    component.instance.trip = trip;
+    component.instance.closeClick.subscribe(() => {
+      this.tripDialog.clear();
+    });
   }
 
   setDimensions(event: any) {
@@ -102,7 +151,10 @@ export class DashboardPage implements OnInit, OnDestroy {
     trips.forEach((trip) => {
       trip = {
         ...trip,
-        summary_date: this.convertDates(trip.departure_date, trip.arrival_date),
+        summary_date: this.dateService.convertDates(
+          trip.departure_date,
+          trip.arrival_date
+        ),
       };
       if (
         _moment().isSameOrAfter(trip.departure_date) &&
@@ -120,35 +172,7 @@ export class DashboardPage implements OnInit, OnDestroy {
         }
       }
     });
-    this.upcomingTrips = this.sortTrips(this.upcomingTrips, true);
-    this.pastTrips = this.sortTrips(this.pastTrips, false);
-  }
-
-  private convertDates(departure_date: string, arrival_date: string) {
-    let date = '';
-    if (_moment(departure_date).year() === _moment(arrival_date).year()) {
-      if (_moment(departure_date).month() === _moment(arrival_date).month()) {
-        date = `${_moment(departure_date).format('MMMM Do')} to ${_moment(
-          arrival_date
-        ).format('Do, YYYY')}`;
-      } else {
-        date = `${_moment(departure_date).format('MMMM Do')} to ${_moment(
-          arrival_date
-        ).format('MMMM Do, YYYY')}`;
-      }
-    } else {
-      date = `${_moment(departure_date).format('MMMM Do, YYYY')} to ${_moment(
-        arrival_date
-      ).format('MMMM Do, YYYY')}`;
-    }
-    return date;
-  }
-
-  private sortTrips(trips: Trip[], isAsc: boolean) {
-    return trips.sort((a, b) =>
-      isAsc
-        ? _moment(a.departure_date).diff(b.departure_date)
-        : _moment(b.departure_date).diff(a.departure_date)
-    );
+    this.upcomingTrips = this.tripService.sortTrips(this.upcomingTrips, true);
+    this.pastTrips = this.tripService.sortTrips(this.pastTrips, false);
   }
 }

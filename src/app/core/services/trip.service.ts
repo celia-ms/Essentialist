@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { paths } from 'src/app/shared/paths';
 import { map } from 'rxjs/operators';
 import { Trip } from '../models/trip';
+import * as _moment from 'moment';
 
 @Injectable({
   providedIn: 'root',
@@ -32,6 +33,14 @@ export class TripService {
       ...trip,
       hash: this.makeHash(32),
     };
+  }
+
+  sortTrips(trips: Trip[], isAsc: boolean) {
+    return trips.sort((a, b) =>
+      isAsc
+        ? _moment(a.departure_date).diff(b.departure_date)
+        : _moment(b.departure_date).diff(a.departure_date)
+    );
   }
 
   private makeHash(length: number) {
