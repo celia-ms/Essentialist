@@ -25,3 +25,12 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .trips-container {
+    .upcoming-container,
+    .past-container {
+      margin: 24px 60px;
+    }
+  }
+}

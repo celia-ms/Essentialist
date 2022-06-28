@@ -8,7 +8,7 @@ mat-grid-tile {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   mat-grid-tile {
     &:nth-child(3n-1) {
       app-card-trip {
