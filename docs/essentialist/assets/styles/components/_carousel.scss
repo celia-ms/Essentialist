@@ -1,0 +1,27 @@
+.owl-prev,
+.owl-next {
+  position: absolute;
+  font-size: 60px !important;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.owl-prev {
+  left: -20px;
+}
+
+.owl-next {
+  right: -30px;
+}
+
+.owl-item.active:nth-child(3n-1) {
+  border-right: solid 1px var(--color-border-primary);
+  border-left: solid 1px var(--color-border-primary);
+}
+
+@media (max-width: 1300px) {
+  .owl-item.active:nth-child(3n-1) {
+    border-right: none;
+    border-left: none;
+  }
+}

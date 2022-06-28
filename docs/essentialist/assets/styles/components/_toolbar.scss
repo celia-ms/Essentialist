@@ -1,0 +1,103 @@
+@mixin color-toolbar($color-p, $color-row) {
+  color: $color-row;
+  p {
+    color: $color-p;
+  }
+  mat-toolbar-row {
+    .options-container {
+      a {
+        color: $color-row;
+      }
+    }
+    .mat-icon-button {
+      .mat-icon {
+        color: $color-row !important;
+      }
+    }
+    .mat-icon {
+      &.logo {
+        g#Group-16 {
+          fill: $color-row;
+        }
+      }
+    }
+  }
+}
+
+app-toolbar {
+  width: calc(100% - 32%);
+  @include color-toolbar(var(--color-text-tertiary), var(--color-text-primary));
+  mat-toolbar-row {
+    p {
+      font-size: 18px;
+    }
+    .options-container {
+      border-left: 1px solid;
+      border-right: 1px solid;
+      margin: 0 12px;
+    }
+    .mat-icon-button {
+      background: none;
+      .mat-icon {
+        font-size: 24px;
+      }
+    }
+    .mat-icon {
+      &.logo {
+        cursor: pointer;
+        width: auto;
+        height: 50px;
+      }
+    }
+  }
+
+  &.integrate {
+    padding: 0 60px;
+    position: absolute;
+    z-index: 1;
+    @include color-toolbar(
+      var(--color-text-secondary),
+      var(--color-text-secondary)
+    );
+    .mat-toolbar {
+      background: none;
+    }
+  }
+}
+
+.mat-toolbar-multiple-rows {
+  border-bottom: 1px solid;
+}
+
+@media (max-width: 992px) {
+  app-toolbar {
+    width: 100%;
+    mat-toolbar-row {
+      flex-direction: column !important;
+      .options-container {
+        border-left: none;
+        border-right: none;
+        margin: 0;
+      }
+    }
+    .toolbar-container {
+      flex-direction: column;
+      margin-top: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      .buttons-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &.integrate {
+      padding: 0 12px;
+    }
+  }
+
+  .mat-toolbar-multiple-rows {
+    border-bottom: none;
+  }
+}
