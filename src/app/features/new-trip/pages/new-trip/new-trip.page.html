@@ -1,0 +1,14 @@
+<div class="new-trip-container">
+    <div [hidden]="isSave" class="h-100">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+            <p class="fw-bold">{{'content.add-trip' | translate |uppercase}}</p>
+            <h1 class="mat-display-1 text-center my-2">{{'content.next-trip' | translate}}</h1>
+            <app-form-trip #formTrip class="w-50 py-4"></app-form-trip>
+            <button mat-stroked-button color="primary" (click)="saveTrip()">
+                {{'content.save-trip' | translate |uppercase}}
+            </button>
+        </div>
+    </div>
+    <app-save-trip *ngIf="isSave" class="d-flex flex-column align-items-center justify-content-center h-100" [title]="trip.title">
+    </app-save-trip>
+</div>

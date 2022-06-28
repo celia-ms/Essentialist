@@ -1,0 +1,77 @@
+{
+    "languages": {
+        "es": "Spanish",
+        "en": "English"
+    },
+    "footer": {
+        "project": "@ESSENTILIS, 2022. ALL RIGHTS RESERVED"
+    },
+    "menu": {
+        "welcome": "Welcome Mr. Tyer",
+        "travel-dispatch": "The Travel Dispatch",
+        "my-trips": "My Trips",
+        "my-profile": "My Profile"
+    },
+    "content": {
+        "on-going-trip": "On Going",
+        "upcoming-trip": "Upcoming Trips",
+        "past-trip": "Past Trips",
+        "next-trip": "Start planing your next trip",
+        "add-trip": "Add Trip",
+        "new-trip": "New Trip",
+        "save-trip": "Save",
+        "back-trips": "Back to my trips",
+        "save-message": "Your new trip has been successfully submitted to your Travel Designer that will contact you in a short time.",
+        "people": "People",
+        "see-more": "See more",
+        "see-less": "See less"
+    },
+    "error": {
+        "get-trips": "There was an error getting trips",
+        "get-trip-by-hash": "There was an error getting the trip"
+    },
+    "fields": {
+        "title": {
+            "display": "Trip title",
+            "placeholder": "Trip title",
+            "error": {
+                "required": "The trip title is required"
+            }
+        },
+        "visibility-status": {
+            "display": "Status",
+            "placeholder": "Status",
+            "error": {
+                "required": "The status is required"
+            }
+        },
+        "departure-date": {
+            "display": "Departure",
+            "placeholder": "Departure",
+            "error": {
+                "required": "The departure is required"
+            }
+        },
+        "arrival-date": {
+            "display": "Arrival",
+            "placeholder": "Arrival",
+            "error": {
+                "required": "The arrival is required"
+            }
+        },
+        "image": {
+            "display": "Url image",
+            "placeholder": "Url image",
+            "error": {
+                "required": "The image is required"
+            }
+        },
+        "destination": {
+            "display": "Destination",
+            "placeholder": "Destination",
+            "error": {
+                "required": "The destination is required"
+            }
+        }
+    }
+}

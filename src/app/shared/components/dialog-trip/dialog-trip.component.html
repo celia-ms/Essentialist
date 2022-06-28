@@ -1,0 +1,12 @@
+<ng-template #dialog let-data>
+    <header class="pb-2">
+        <div class="d-flex justify-content-end">
+            <button mat-icon-button [disableRipple]="true" (click)="close()">
+                <mat-icon class="material-symbols-outlined">close</mat-icon>
+            </button>
+        </div>
+    </header>
+    <mat-dialog-content class="h-100">
+        <app-header-trip [trip]="trip"></app-header-trip>
+    </mat-dialog-content>
+</ng-template>

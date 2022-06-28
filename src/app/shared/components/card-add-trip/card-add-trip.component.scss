@@ -1,0 +1,22 @@
+.add-trip-container {
+  background: var(--color-background-secondary);
+  height: 380px;
+  border-radius: 0;
+  border: 1px solid var(--color-border-secondary);
+  margin: 0 16px;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .add-trip-container {
+    height: 300px;
+    margin: 0 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .add-trip-container {
+    height: 340px;
+    margin: 0 12px;
+  }
+}

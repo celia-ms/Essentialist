@@ -1,0 +1,8 @@
+<div class="header-trip-container" style="background-image: url({{trip.image}})">
+    <div class="information-container d-flex flex-column align-items-start justify-content-center w-100">
+        <p class="mat-subheading-2">{{title | translate}}</p>
+        <h1 class="mat-display-4 m-0">{{trip.title | uppercase}}</h1>
+        <h2 class="mat-subheading-2 fst-italic">{{trip.summary_date}}</h2>
+        <h2 class="fst-italic">{{trip.adults + trip.children + trip.infants}} {{'content.people' | translate}}</h2>
+    </div>
+</div>

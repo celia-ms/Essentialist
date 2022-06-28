@@ -1,0 +1,35 @@
+<div class="trips-container">
+    <div class="on-going-container">
+        <app-header-trip *ngIf="onGoingTrip" [title]="'content.on-going-trip'" [trip]="onGoingTrip"></app-header-trip>
+    </div>
+    <div class="upcoming-container py-4">
+        <p class="mat-subheading-2">{{'content.upcoming-trip' | translate}}</p>
+        <app-card-add-trip *ngIf="upcomingTrips.length === 0" (addClick)="navigateToNewTrip()"></app-card-add-trip>
+        <owl-carousel *ngIf="upcomingTrips.length > 0" [options]="carouselOptions" [carouselClasses]="['owl-theme', 'sliding']">
+            <app-card-add-trip (addClick)="navigateToNewTrip()"></app-card-add-trip>
+            <app-card-trip *ngFor="let trip of upcomingTrips;trackBy: trackByTrip" [trip]=trip (click)="getTripByHash(trip.hash)"></app-card-trip>
+
+        </owl-carousel>
+    </div>
+    <div class="past-container pb-4">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header class="p-0">
+                    <mat-panel-title>
+                        <p class="mat-subheading-2">{{'content.past-trip' | translate}}</p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{ panelOpenState ? ('content.see-less' | translate |uppercase) : ('content.see-more' | translate |uppercase) }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <mat-grid-list class="py-3 w-100" [rowHeight]="rowHeight" [cols]="columns" (window:resize)="setDimensions($event.target)">
+                    <mat-grid-tile *ngFor="let trip of pastTrips;trackBy: trackByTrip">
+                        <app-card-trip class="w-100" [trip]=trip (click)="getTripByHash(trip.hash)"></app-card-trip>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
+
+<ng-template #tripDialog></ng-template>
