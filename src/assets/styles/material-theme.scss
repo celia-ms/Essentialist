@@ -25,11 +25,11 @@ $mt-light-palette-warn: mat.define-palette(e.$light-warn-color);
 $mt-typography: mat.define-typography-config(
   $font-family: "PlantinMTProRg",
   /*One-off header, usually at the top of the page.*/ $display-4:
-    mat.define-typography-level(112px, 112px, normal, $letter-spacing: 0.2em),
+    mat.define-typography-level(90px, 90px, normal, $letter-spacing: 0.2em),
   $display-3:
     mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
   $display-2:
-    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+    mat.define-typography-level(46px, 48px, 400, $letter-spacing: -0.005em),
   $display-1: mat.define-typography-level(34px, 40px, 400),
   /*Section heading corresponding to the <h1> tag*/ $headline:
     mat.define-typography-level(24px, 32px, 400),

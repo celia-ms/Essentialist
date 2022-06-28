@@ -3,3 +3,14 @@
   height: calc(100vh - 92px) !important;
   overflow: auto !important;
 }
+
+@media (max-width: 768px) {
+  .new-trip-container {
+    .mat-display-1 {
+      font-size: 24px;
+    }
+    app-form-trip {
+      width: 80% !important;
+    }
+  }
+}

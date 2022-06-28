@@ -108,12 +108,20 @@ export class DashboardPage implements OnInit, OnDestroy {
     const width = event.innerWidth;
     if (width < 768) {
       this.refreshDimensions(1, '340px');
+      this.carouselOptions = { items: 1, dots: false, nav: true, slideBy: 1 };
     } else {
       if (width >= 768 && width < 992) {
         this.refreshDimensions(2, '380px');
+        this.carouselOptions = { items: 2, dots: false, nav: true, slideBy: 2 };
       } else {
         if (width >= 992 && width < 1860) {
           this.refreshDimensions(3, '420px');
+          this.carouselOptions = {
+            items: 3,
+            dots: false,
+            nav: true,
+            slideBy: 3,
+          };
         }
       }
     }

@@ -68,3 +68,36 @@ app-toolbar {
 .mat-toolbar-multiple-rows {
   border-bottom: 1px solid;
 }
+
+@media (max-width: 768px) {
+  app-toolbar {
+    width: 100%;
+    mat-toolbar-row {
+      flex-direction: column !important;
+      .options-container {
+        border-left: none;
+        border-right: none;
+        margin: 0;
+      }
+    }
+    .toolbar-container {
+      flex-direction: column;
+      margin-top: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      .buttons-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &.integrate {
+      padding: 0 12px;
+    }
+  }
+
+  .mat-toolbar-multiple-rows {
+    border-bottom: none;
+  }
+}

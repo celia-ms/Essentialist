@@ -1,19 +1,21 @@
 <mat-toolbar>
     <mat-toolbar-row class="d-flex align-items-center justify-content-between w-100 p-2">
         <mat-icon class="logo" svgIcon="icon-logo" (click)="navigateToDashboard()"></mat-icon>
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="toolbar-container d-flex align-items-center justify-content-between">
             <p class="m-0 fst-italic">{{ "menu.welcome" | translate}}</p>
             <div class="options-container">
                 <a mat-button [routerLink]="''"> {{ "menu.travel-dispatch" | translate}} </a>
                 <a mat-button class="fst-italic" [routerLink]="''"> {{ "menu.my-trips" | translate}} </a>
                 <a mat-button [routerLink]="''"> {{ "menu.my-profile" | translate}} </a>
             </div>
-            <button mat-icon-button>
-                <mat-icon class="material-symbols-outlined" matBadge="{{counter}}" matBadgeColor="warn">chat_bubble</mat-icon>
-            </button>
-            <button mat-icon-button [disableRipple]="true" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu">
-                <mat-icon class="material-symbols-outlined">settings</mat-icon>
-            </button>
+            <div class="buttons-container">
+                <button mat-icon-button>
+                    <mat-icon class="material-symbols-outlined" matBadge="{{counter}}" matBadgeColor="warn">chat_bubble</mat-icon>
+                </button>
+                <button mat-icon-button [disableRipple]="true" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu">
+                    <mat-icon class="material-symbols-outlined">settings</mat-icon>
+                </button>
+            </div>
         </div>
         <mat-menu #menu="matMenu" class="toolbar-menu">
             <mat-button-toggle-group [(ngModel)]="selectedLanguage" (change)="changeLanguage()" name="language">
