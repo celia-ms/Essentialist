@@ -118,12 +118,8 @@ describe('TripService', () => {
       it('should return the trip with the hash that passed to param', (done: DoneFn) => {
         httpClientSpy.get.and.returnValue(asyncData(tripJSONMock));
 
-        console.log('TRIP 1 ', trip);
-
         service.getTripByHash(hashSuccess).subscribe({
           next: (response) => {
-            console.log('response 1 ', response);
-            console.log('hashSuccess 1 ', hashSuccess);
             expect(response.hash).toEqual(hashSuccess);
             done();
           },
@@ -162,7 +158,6 @@ describe('TripService', () => {
 
       it('should return the new trip with the data that passed to param', () => {
         const tripNew = service.createTrip(tripNewMock);
-        console.log('tripNew ', tripNew);
         tripNewMock.hash = tripNew.hash;
         expect(tripNew).toEqual(tripNew);
       });
