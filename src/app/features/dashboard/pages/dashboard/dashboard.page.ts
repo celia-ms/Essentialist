@@ -54,6 +54,7 @@ export class DashboardPage implements OnInit, OnDestroy {
   ) {
     this.subscriptions.add(
       this.store.pipe(select(tripSelector.getTrips)).subscribe((trips) => {
+        console.log('Trips', trips);
         this.organizeTrips(trips);
       })
     );

@@ -23,7 +23,6 @@ import { statusTypes } from '../../../../core/constants/constants';
 @Component({
   selector: 'app-form-trip',
   templateUrl: './form-trip.component.html',
-  styleUrls: ['./form-trip.component.scss'],
 })
 export class FormTripComponent implements OnInit, OnChanges, OnDestroy {
   @Input('action') action: number = 0;

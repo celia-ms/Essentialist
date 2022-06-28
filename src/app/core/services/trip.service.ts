@@ -23,7 +23,7 @@ export class TripService {
       .get(paths.trips)
       .pipe(
         map((response: any) =>
-          response.results.find((trip: any) => trip.hash === hash)
+          response.results?.find((trip: any) => trip.hash === hash)
         )
       );
   }
