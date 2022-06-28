@@ -8,4 +8,21 @@
 .information-container {
   height: 560px;
   color: var(--color-text-secondary);
+  word-break: break-word;
+  text-shadow: 0 1px var(--color-text-primary);
+}
+
+@media (max-width: 992px) {
+  .header-trip-container {
+    background-size: 100% 360px;
+    padding: 0 12px;
+  }
+  .information-container {
+    height: 360px;
+    justify-content: end !important;
+    h1.mat-display-4.m-0 {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
 }

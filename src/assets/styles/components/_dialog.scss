@@ -1,0 +1,15 @@
+.mat-dialog-container {
+  padding: 0;
+}
+
+.mat-dialog-content {
+  margin: 24px;
+}
+
+@media (max-width: 992px) {
+  .cdk-overlay-container .dialog-trip-container + * > .cdk-overlay-pane {
+    max-width: 94vw !important;
+    width: 94vw !important;
+    height: 60vh !important;
+  }
+}

@@ -14,7 +14,14 @@
   right: -30px;
 }
 
-.owl-item.active:nth-child(3n -1) {
+.owl-item.active:nth-child(3n-1) {
   border-right: solid 1px var(--color-border-primary);
   border-left: solid 1px var(--color-border-primary);
+}
+
+@media (max-width: 1300px) {
+  .owl-item.active:nth-child(3n-1) {
+    border-right: none;
+    border-left: none;
+  }
 }
