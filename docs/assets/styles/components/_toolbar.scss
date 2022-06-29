@@ -78,6 +78,9 @@ app-toolbar {
         border-left: none;
         border-right: none;
         margin: 0;
+        a {
+          font-size: 15px;
+        }
       }
     }
     .toolbar-container {
@@ -99,5 +102,6 @@ app-toolbar {
 
   .mat-toolbar-multiple-rows {
     border-bottom: none;
+    height: 136px;
   }
 }
